@@ -45,6 +45,14 @@
   gap: 50px;
 }
 
+.user_contact_info a {
+  text-decoration: none;
+}
+
+.user_contact_info a:hover {
+  text-decoration: underline;
+}
+
 .date {
   margin-top: 7px;
 }

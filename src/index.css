@@ -6,6 +6,7 @@
   --dark_blue: #4b619b;
   --very_light_gray: #f6f8ff;
   --white: #fefefe;
+  --light_blue: #60abff;
   /*night mode colors*/
   --night_mode_white: #ffffff;
   --night_mode_black: #141d2f;
@@ -22,6 +23,12 @@
 
 input:focus {
   outline: none;
+  font-family: "Space Mono", monospace;
+  caret-color: var(--blue);
+}
+
+#dark input:focus {
+  color: var(--white);
 }
 
 input::placeholder,

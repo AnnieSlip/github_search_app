@@ -17,6 +17,14 @@
   cursor: pointer;
 }
 
+.switch_button:hover {
+  color: var(--night_mode_black);
+}
+
 #dark .switch_button {
   color: var(--white);
+}
+
+#dark .switch_button:hover {
+  color: var(--gray);
 }

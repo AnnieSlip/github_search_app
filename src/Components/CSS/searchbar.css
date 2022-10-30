@@ -27,7 +27,7 @@
 }
 
 .search_button:hover {
-  background-color: var(--dark_blue);
+  background-color: var(--light_blue);
 }
 
 .error_message {

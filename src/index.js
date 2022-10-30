@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import "./Components/header.css";
-import "./Components/searchbar.css";
-import "./Components/userCard.css";
+import "./Components/CSS/header.css";
+import "./Components/CSS/searchbar.css";
+import "./Components/CSS/userCard.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

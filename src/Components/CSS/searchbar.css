@@ -29,3 +29,13 @@
 .search_button:hover {
   background-color: var(--dark_blue);
 }
+
+.error_message {
+  font-size: 10px;
+  font-weight: bold;
+  color: red;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,7 +1,7 @@
-import { getSuggestedQuery } from "@testing-library/react";
 import React, { useState, useEffect } from "react";
 const URL = "https://api.github.com/users/";
 const octocat = "octocat";
+const errorMessage = document.querySelector(".error_message");
 
 const Search = ({ setUserInfo }) => {
   const [userName, setUserName] = useState("");
@@ -10,7 +10,12 @@ const Search = ({ setUserInfo }) => {
   const getUser = async (name) => {
     const response = await fetch(`${URL}${name}`);
     const user = await response.json();
-    setUserInfo(user);
+    if (response.ok) {
+      setUserInfo(user);
+      errorMessage.classList.add("hidden");
+    } else {
+      errorMessage.classList.remove("hidden");
+    }
   };
 
   //display default data on first render
@@ -37,6 +42,7 @@ const Search = ({ setUserInfo }) => {
           setUserName(e.target.value);
         }}
       />
+      <p className="error_message hidden">No results</p>
       <button type="submit" className="search_button" onClick={submitHandler}>
         Search
       </button>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 const URL = "https://api.github.com/users/";
 const octocat = "octocat";
-const errorMessage = document.querySelector(".error_message");
 
 const Search = ({ setUserInfo }) => {
   const [userName, setUserName] = useState("");
@@ -12,9 +11,9 @@ const Search = ({ setUserInfo }) => {
     const user = await response.json();
     if (response.ok) {
       setUserInfo(user);
-      errorMessage.classList.add("hidden");
+      document.querySelector(".error_message").classList.add("hidden");
     } else {
-      errorMessage.classList.remove("hidden");
+      document.querySelector(".error_message").classList.remove("hidden");
     }
   };
 

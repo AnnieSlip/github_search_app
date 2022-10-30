@@ -27,6 +27,8 @@ const UserCard = ({ userInfo }) => {
         alt="github user avatar"
         className="profile_avatar"
       />
+
+      {/* UserName and Bio */}
       <div className="user_info_container">
         <div className="first_control">
           <div>
@@ -41,6 +43,7 @@ const UserCard = ({ userInfo }) => {
         </div>
         <p>{bio ? bio : "This profile has no bio"}</p>
 
+        {/* Followers Details Section */}
         <section className="followers_info_container">
           <div>
             <h4>Repos</h4>
@@ -56,6 +59,7 @@ const UserCard = ({ userInfo }) => {
           </div>
         </section>
 
+        {/* User Contact Details Section */}
         <section className="user_contact_info">
           <div>
             <div className="user_contact_info_control first">

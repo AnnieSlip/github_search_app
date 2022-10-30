@@ -40,14 +40,6 @@ body {
   height: 100vh;
 }
 
-.app_container {
-  width: 45%;
-  margin: auto;
-}
-.app_container > * {
-  margin-bottom: 15px;
-}
-
 h1,
 h2 {
   font-weight: bold;
@@ -84,12 +76,7 @@ code {
     monospace;
 }
 
-.cards_container {
-  background-color: var(--white);
-  display: flex;
-  border-radius: 8px;
-  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
-}
+/*Dark mode CSS */
 
 #dark {
   background-color: var(--night_mode_black);
@@ -109,6 +96,24 @@ code {
   color: var(--white);
 }
 
+/*Main Wrappers*/
+
+.app_container {
+  width: 45%;
+  margin: auto;
+}
+.app_container > * {
+  margin-bottom: 15px;
+}
+
+.cards_container {
+  background-color: var(--white);
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+}
+
+/*Mobile Version*/
 @media only screen and (max-width: 800px) {
   .app_container {
     width: 90%;

@@ -14,6 +14,7 @@ const UserCard = ({ userInfo }) => {
     url,
   } = userInfo;
 
+  //get day,month, year from ISOS string
   const date = new Date(created_at);
   const year = date.getFullYear();
   const day = date.getDate();

@@ -3,20 +3,22 @@ import React, { useState, useEffect } from "react";
 const URL = "https://api.github.com/users/";
 const octocat = "octocat";
 
-const Search = ({ userInfo, setUserInfo }) => {
+const Search = ({ setUserInfo }) => {
   const [userName, setUserName] = useState("");
 
+  //Fetch data from github api
   const getUser = async (name) => {
     const response = await fetch(`${URL}${name}`);
     const user = await response.json();
     setUserInfo(user);
-    console.log(user);
   };
 
+  //display default data on first render
   useEffect(() => {
     getUser(octocat);
   }, []);
 
+  //display user's data
   const submitHandler = (e) => {
     e.preventDefault();
     getUser(userName);

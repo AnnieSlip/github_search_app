@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Header from "./Header";
-import Search from "./Search";
-import UserCard from "./UserCard";
+import Header from "./Components/Header";
+import Search from "./Components/Searchbar";
+import UserCard from "./Components/UserCard";
 import { createContext } from "react";
 
 export const ThemeContext = createContext(null);
@@ -9,10 +9,9 @@ export const ThemeContext = createContext(null);
 function App() {
   const [userInfo, setUserInfo] = useState({});
   const [theme, setTheme] = useState("light");
-  // useEffect(() => {
-  //   getUser(userName);
-  //   console.log(userInfo);
-  // }, [userName]);
+
+  // toggle dark mode
+
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };

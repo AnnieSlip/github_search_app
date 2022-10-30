@@ -1,0 +1,116 @@
+:root {
+  /*Light mode colors*/
+  --blue: #0079ff;
+  --gray: #697c9a;
+  --dark_gray: #2b3442;
+  --dark_blue: #4b619b;
+  --very_light_gray: #f6f8ff;
+  --white: #fefefe;
+  /*night mode colors*/
+  --night_mode_white: #ffffff;
+  --night_mode_black: #141d2f;
+  --night_mode_gray: #1e2a47;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder,
+button {
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Mono", monospace;
+  color: var(--dark_blue);
+  background-color: var(--very_light_gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.app_container {
+  width: 45%;
+  margin: auto;
+}
+.app_container > * {
+  margin-bottom: 15px;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 26px;
+  line-height: 38px;
+  color: var(--dark_gray);
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 33px;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+h4 {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+p,
+a {
+  color: var(--gray);
+  font-weight: 300;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.cards_container {
+  background-color: var(--white);
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+}
+
+#dark {
+  background-color: var(--night_mode_black);
+  height: 100vh;
+  display: flex;
+}
+
+#dark .cards_container {
+  background-color: var(--night_mode_gray);
+}
+
+#dark p,
+#dark h1,
+#dark h2,
+#dark h3,
+#dark h4 {
+  color: var(--white);
+}
+
+@media only screen and (max-width: 800px) {
+  .app_container {
+    width: 90%;
+  }
+}

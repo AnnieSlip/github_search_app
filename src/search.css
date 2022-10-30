@@ -1,0 +1,31 @@
+.search_component {
+  padding: 7px 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search_input {
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 5px 10px;
+}
+
+#dark .search_input {
+  background-color: inherit;
+}
+#dark .search_input::placeholder {
+  color: var(--white);
+}
+.search_button {
+  background-color: var(--blue);
+  color: var(--white);
+  border-radius: inherit;
+  border: none;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.search_button:hover {
+  background-color: var(--dark_blue);
+}

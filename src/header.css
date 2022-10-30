@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.switch_button {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  text-transform: uppercase;
+  color: var(--gray);
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+#dark .switch_button {
+  color: var(--white);
+}

@@ -41,7 +41,7 @@ const UserCard = ({ userInfo }) => {
             Joined at {day} {month} {year}
           </p>
         </div>
-        <p>{bio ? bio : "This profile has no bio"}</p>
+        <p>{bio || "This profile has no bio"}</p>
 
         {/* Followers Details Section */}
         <section className="followers_info_container">
@@ -64,7 +64,7 @@ const UserCard = ({ userInfo }) => {
           <div>
             <div className="user_contact_info_control first">
               <img src="../assets/icon-location.svg" />
-              <p>{location ? location : "Not Available"}</p>
+              <p>{location || "Not Available"}</p>
             </div>
 
             <div className="user_contact_info_control">
@@ -75,7 +75,7 @@ const UserCard = ({ userInfo }) => {
           <div>
             <div className="user_contact_info_control first">
               <img src="../assets/icon-twitter.svg" />
-              <p>{twitter_username ? twitter_username : "Not Available"}</p>
+              <p>{twitter_username || "Not Available"}</p>
             </div>
 
             <div className="user_contact_info_control">

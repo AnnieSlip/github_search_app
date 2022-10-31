@@ -1,4 +1,5 @@
 import React from "react";
+import calculateDate from "../Utils/calculateDate";
 
 const UserCard = ({ userInfo }) => {
   const {
@@ -79,14 +80,6 @@ const UserCard = ({ userInfo }) => {
       </div>
     </article>
   );
-};
-
-const calculateDate = (isoString) => {
-  const date = new Date(isoString);
-  const year = date.getFullYear();
-  const day = date.getDate();
-  const month = date.toLocaleString("en-US", { month: "short" });
-  return `${day} ${month} ${year}`;
 };
 
 export default UserCard;

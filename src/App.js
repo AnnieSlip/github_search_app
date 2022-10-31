@@ -11,7 +11,6 @@ function App() {
   const [theme, setTheme] = useState("light");
 
   // toggle dark mode
-
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };

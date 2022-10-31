@@ -14,12 +14,6 @@ const UserCard = ({ userInfo }) => {
     url,
   } = userInfo;
 
-  //get day,month, year from ISOS string
-  const date = new Date(created_at);
-  const year = date.getFullYear();
-  const day = date.getDate();
-  const month = date.toLocaleString("en-US", { month: "short" });
-
   return (
     <article className="cards_container user_card">
       <img
@@ -37,9 +31,7 @@ const UserCard = ({ userInfo }) => {
               @{login}
             </a>
           </div>
-          <p className="date">
-            Joined at {day} {month} {year}
-          </p>
+          <p className="date">Joined at {calculateDate(created_at)}</p>
         </div>
         <p>{bio || "This profile has no bio"}</p>
 
@@ -87,6 +79,14 @@ const UserCard = ({ userInfo }) => {
       </div>
     </article>
   );
+};
+
+const calculateDate = (isoString) => {
+  const date = new Date(isoString);
+  const year = date.getFullYear();
+  const day = date.getDate();
+  const month = date.toLocaleString("en-US", { month: "short" });
+  return `${day} ${month} ${year}`;
 };
 
 export default UserCard;
